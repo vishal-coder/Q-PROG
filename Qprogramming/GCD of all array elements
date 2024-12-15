@@ -1,0 +1,19 @@
+function gcd(numbers) {
+    let result = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        result = gcdTwoNumbers(result, numbers[i]);
+    }
+    return result;
+}
+
+function gcdTwoNumbers(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+let theGCD = gcd([12, 18, 24]);
+console.log(theGCD); // 6
