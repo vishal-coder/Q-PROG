@@ -31,7 +31,13 @@ if (sum == number) {
 else {
   console.log(`${number} is not an Armstrong number.`);
 }
+////////////////////////////////////////////////////////////////////////////////////
+// with reduce
 
+let number = 159
+number = number.toString()
+let res = number.split("").reduce((acc,x) => acc + Math.pow(Number(x),number.length)  , 0 )
+console.log(res)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
