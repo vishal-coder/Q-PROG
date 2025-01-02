@@ -5,3 +5,12 @@ for (let world of str.split(" ")) {
 }
 
 console.log(worlds.join(" "));
+
+
+//with reduce function 
+let str = "hel noo w"
+let res = str.split(' ').reduce((acc,x)=>{
+  acc.push(x.charAt(0).toUpperCase() + x.slice(1))
+  return acc
+},[])
+console.log(res.join(" "))
